@@ -17,9 +17,12 @@ let get_wire_type wt = match wt with
   | 5 -> Fixed32
   | _ -> Unknown;; 
 
-let decode_tag  = ();;
+(* returns wire type and field number *)
+let extract_wire_type_bits byte = byte land 0b111
 
-let read_proto_bin filename = 
+let decode_tag inp : (wire_type * int) = (get_wire_type (extract_wire_type_bits inp), Int.shift_right inp 3)
+
+let read_proto_bin filename : string = 
   let channel = open_in_bin filename in
   let len = in_channel_length channel in
   let buffer = really_input_string channel len in
