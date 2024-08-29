@@ -17,20 +17,14 @@ let get_wire_type wt = match wt with
   | 5 -> Fixed32
   | _ -> Unknown;; 
 
-let decode_tag _ = ();;
-
+let decode_tag  = ();;
 
 let read_proto_bin filename = 
   let channel = open_in_bin filename in
-  let rec read_bytes () =
-    try
-      let byte = input_char channel in
-      Printf.printf "Read byte: %02x\n" (int_of_char byte);
-      read_bytes ()
-    with End_of_file ->
-      close_in channel
-  in
-  read_bytes()
+  let len = in_channel_length channel in
+  let buffer = really_input_string channel len in
+  close_in channel;
+  buffer;;
 
 let () = 
   let in_channel = open_in "../test/proto/simple_msg_test.bin" in
