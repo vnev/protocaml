@@ -9,8 +9,10 @@ is a repetitive statement as I'm still learning the ins and outs of Protobuf
 
 my goals with this project are mainly to learn more OCaml and Protobuf.
 
--[ ] code generation (generating Protobuf interfaces in OCaml given `.proto`s)
--[ ] only using OCaml's standard library
--[ ] serializing and deserializing Protobuf binaries
+- [ ] code generation (generating Protobuf interfaces in OCaml given `.proto`s)
+
+- [ ] only using OCaml's standard library
+
+- [ ] serializing and deserializing Protobuf binaries
 
 
