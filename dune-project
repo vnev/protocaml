@@ -7,9 +7,9 @@
 (source
  (github username/reponame))
 
-(authors "Author Name")
+(authors "Vedant Nevetia")
 
-(maintainers "Maintainer Name")
+(maintainers "Vedant Nevetia")
 
 (license LICENSE)
 
@@ -17,8 +17,8 @@
 
 (package
  (name protocaml)
- (synopsis "A short synopsis")
- (description "A longer description")
+ (synopsis "OCaml Protobuf Parser")
+ (description "OCaml Protobuf Parser")
  (depends ocaml dune)
  (tags
   (topics "to describe" your project)))

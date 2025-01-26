@@ -1,2 +1,7 @@
+(env
+  (dev
+    (flags :standard -warn-error -A)))
+
 (library
- (name protocaml))
+ (name protocaml)
+ (modules protocaml deserialize))

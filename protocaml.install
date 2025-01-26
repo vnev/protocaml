@@ -1,0 +1,11 @@
+lib: [
+  "_build/install/default/lib/protocaml/META"
+  "_build/install/default/lib/protocaml/dune-package"
+  "_build/install/default/lib/protocaml/opam"
+]
+bin: [
+  "_build/install/default/bin/protocaml"
+]
+doc: [
+  "_build/install/default/doc/protocaml/README.md"
+]
